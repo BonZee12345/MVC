@@ -10,6 +10,22 @@ class AppController{
     public function filter(){
         call_user_func(array($this, $this -> route["action"]));
     }
+
+    public function render(){
+        require_once ROOT . "parts" . DS . "header.php";
+        require_once ROOT . "pages" . DS . strtolower($this->route["controller"]) . DS . $this-> route["action"].".php";
+        // Default: src/pages/books/index.php
+        require_once ROOT . "parts" . DS . "footer.php";
+        
+    }
+
+
+
+
+
+
+
+
 }
 
 ?>

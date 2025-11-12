@@ -15,6 +15,10 @@ class BooksController extends AppController{
     public function view(){
         echo "Books view action called.";
 
+    }    
+    public function edit(){
+        echo "Books edit action called.";
+
     }
 
 

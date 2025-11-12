@@ -37,6 +37,7 @@ if(isset($routes[$page])){
     echo "The page you are looking for does not exist";
 }
 
+$controllerObj->render();
 
 
 
