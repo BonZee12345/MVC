@@ -1,5 +1,6 @@
 <?php
 require_once ROOT . "controllers" . DS . "AppController.php";
+require_once ROOT . "dao" . DS . 'BooksDAO.php';
 
 class BooksController extends AppController{
 

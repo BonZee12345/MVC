@@ -4,6 +4,7 @@ setlocale(LC_TIME, "nl_BE");
 define("DS", DIRECTORY_SEPARATOR); 
 define("ROOT", dirname(__FILE__) . DS);
 //session start
+// if(isset($_GET["debug"]) && $_GET["debug"]){
 ini_set("display_errors",1);
 error_reporting((E_ALL));
 

@@ -13,6 +13,7 @@ class AppController{
 
     public function render(){
         require_once ROOT . "parts" . DS . "header.php";
+        // view inladen
         require_once ROOT . "pages" . DS . strtolower($this->route["controller"]) . DS . $this-> route["action"].".php";
         // Default: src/pages/books/index.php
         require_once ROOT . "parts" . DS . "footer.php";

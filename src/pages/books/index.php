@@ -1,2 +1,2 @@
-    <?php
-    echo "this is the books index page";
+<?php
+echo "this is the books index page";
