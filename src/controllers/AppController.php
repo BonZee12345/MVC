@@ -2,7 +2,7 @@
 
 class AppController{
     public $route = array();
-
+    public $viewVars = array();
     public function __construct(){
 
     }
@@ -12,6 +12,8 @@ class AppController{
     }
 
     public function render(){
+        extract($this->viewVars, EXTR_OVERWRITE);
+
         require_once ROOT . "parts" . DS . "header.php";
         // view inladen
         require_once ROOT . "pages" . DS . strtolower($this->route["controller"]) . DS . $this-> route["action"].".php";
@@ -21,11 +23,10 @@ class AppController{
     }
 
 
-
-
-
-
-
+    public function set($variableName, $value){
+        $this->viewVars[$variableName] = $value;
+        
+    }
 
 }
 

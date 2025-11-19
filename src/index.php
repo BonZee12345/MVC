@@ -12,6 +12,8 @@ error_reporting((E_ALL));
 
 //load essential files
 require_once ROOT . "include" . DS . "functions.php";
+require_once ROOT . "classes" . DS . "Config.php";
+require_once ROOT . "classes" . DS . "DatabasePDO.php";
 require_once ROOT . "include" . DS . "routes.php";
 
 
@@ -30,15 +32,15 @@ if(isset($routes[$page])){
 
     require_once ROOT . "controllers" . DS . $controllerName . ".php";
     $controllerObj = new $controllerName(); //maakt obj van var
-    $controllerObj->route = $route;
-    $controllerObj->filter();
+    $controllerObj->route = $route; //verwijst naar de juiste route
+    $controllerObj->filter(); //nog niet uitgelegd
 }else{
     header("HTTP/1.0 404 Not found");
     echo "<h1>404 Page Not Found</h1>";
     echo "The page you are looking for does not exist";
 }
 
-$controllerObj->render();
+$controllerObj->render();//Toont pagina met daarin het object met data.
 
 
 
