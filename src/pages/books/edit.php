@@ -40,6 +40,8 @@ echo "
         <input type ='text' name='book_status' id='book_status' value='';>
 
         <label for='book_img'>Image</label>
-        <input type ='text' name='book_img' id='book_img' value='';>
+        <input type='text' name='book_img' id='book_img' value='';>
+
+        <input type='submit' values='Save';
     </form>
 ";
