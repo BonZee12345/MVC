@@ -3,3 +3,6 @@ body{
     background-color: bisque;
 }
 
+.book img{
+    max-width: 300px;
+}

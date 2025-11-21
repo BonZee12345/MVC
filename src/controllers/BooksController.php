@@ -24,8 +24,14 @@ class BooksController extends AppController{
     public function edit(){
         echo "Books edit action called.";
         trace($_GET["book_id"]);
-        $book = $this->BooksDAO->getBooksById($_GET["book_id"]);
+        $book = $this->BooksDAO->getBookById($_GET["book_id"]);
         $this->set("book", $book);
+
+        if(!empty($_POST)){
+            trace($_POST);
+
+            $this->BooksDAO->editBookById($_POST);
+        }
 
 
         // We landen hier dankzij onze url -> ?page=edit-book&book_id=1
@@ -38,11 +44,7 @@ class BooksController extends AppController{
             // <input type= 'hidden' name='book_id' values='x'
         // 4c. 
         
-
     }
-
-
 
 }
 
-?>
