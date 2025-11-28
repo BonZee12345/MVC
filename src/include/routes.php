@@ -10,6 +10,9 @@ $routes = [
     "book"          => array("controller" => "Books",       "action" => "view"),
     "add-book"      => array("controller" => "Books",       "action" => "add"),
     "edit-book"     => array("controller" => "Books",       "action" => "edit"),
-    "delete-book"   => array("controller" => "Books",       "action" => "delete")
-    
+    "delete-book"   => array("controller" => "Books",       "action" => "delete"),
+
+    "movies"        =>array("controller" => "Movies",        "action" => "index"),
+    "movie"        =>array("controller" => "Movies",        "action" => "view"),
+    "reserve-film"  =>array("controller" => "Movies",        "action" => "reserve")
 ];

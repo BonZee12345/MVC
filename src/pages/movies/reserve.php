@@ -1,21 +1,21 @@
 <?php
-        
-    echo"<div class='book'";
-    echo "<div href='?page=view-book&book_id=".$book['book_id']."'>";
-    echo "<img src='assets/img/".$book['book_img']."' alt='".$book['book_name']."'>";
 
-    echo "<div class='actions'>";
-        echo "<a href='?page=edit-book&book_id=".$book['book_id']."' class='edit-book'>Edit</a>";
-        echo "<a href='?page=delete-book&book_id=".$book['book_id']."' class='delete-book'>Delete</a>";
-    echo "</div>";
+echo"<div class='movie'>";
+            echo "<div href='?page=view-movie&movie_id=".$movie['movie_id']."'>";
+            echo "<img src='assets/img/".$movie['movie_img']."' alt='".$movie['title']."'>";
 
-    echo "<a class='bookTitle>";
-        echo "<h2>".$book['book_name']."</h2>";
-    echo "</a>";
+            echo "<div class='actions'>";
+                echo "<a href='?page=reserve-movie&movie_id=".$movie['movie_id']."' class='reserve-movie'>Reserve</a>";
+            echo "</div>";
 
-    echo "<h3>".$book['author']."</h3>";
-    echo "<h4>".$book['publication_year']."</h4>";
-    echo "</div>";
+            echo "<a class='movieTitle>";
+                echo "<h2>".$movie['title']."</h2>";
+            echo "</a>";
+
+            echo "<h3>".$movie['director']."</h3>";
+            echo "<h4>".$movie['release_year']."</h4>";
+            echo "<h4>".$movie['stock_available']."</h4>";
+echo "</div>";
 
 echo "
     <form action='' method='post'>
