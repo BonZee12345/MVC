@@ -19,6 +19,8 @@ echo "<div class= 'books'>";
             echo "<h4>".$book['publication_year']."</h4>";
         echo "</div>";
     }
+    echo "<div class='actions'>";
+        echo "<a href=?page=add-book= class='add-book'>Add</a>";
     
 echo "</div>";
 

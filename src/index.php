@@ -10,23 +10,22 @@ ini_set("display_errors",1);
 error_reporting((E_ALL));
 
 //load essential files
-require_once ROOT . "include" . DS . "functions.php";
+require_once ROOT . "includes" . DS . "functions.php";
 require_once ROOT . "classes" . DS . "Config.php";
 require_once ROOT . "classes" . DS . "DatabasePDO.php";
-require_once ROOT . "include" . DS . "routes.php";
+require_once ROOT . "includes" . DS . "routes.php";
 
 // Feed the routing
 $page = "books";
-if(isset($_GET["page"])){   
-    $page = $_GET["page"];
-}
+if(isset($_GET["page"])) $page = $_GET["page"];
+
 
 if(isset($routes[$page])){
     $route = $routes[$page];
     $controllerName = $route["controller"] . "Controller"; //BooksController (default)
 
     require_once ROOT . "controllers" . DS . $controllerName . ".php";
-    $controllerObj = new $controllerName(); //maakt obj van var
+    $controllerObj = new $controllerName(); //maakt obj van class en slaat op in var
     $controllerObj->route = $route; //verwijst naar de juiste route
     $controllerObj->filter(); //nog niet uitgelegd
 }else{

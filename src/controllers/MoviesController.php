@@ -1,7 +1,7 @@
 <?php
 require_once ROOT . "controllers" . DS . "AppController.php";
 require_once ROOT . "dao" . DS . 'MoviesDAO.php';
-require_once ROOT . "include" . DS . 'functions.php';
+require_once ROOT . "includes" . DS . 'functions.php';
 
 class MoviesController extends AppController{
     private MoviesDAO $MoviesDAO;

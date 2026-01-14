@@ -87,6 +87,34 @@ class BooksDAO{
             return array();
         }
     }
+
+    public function addBook($data){
+        try{
+            $qry = "INSERT INTO books
+                    VALUES  ('book_name', 'author', 'publication_year', 'book_status', 'book_img')";
+                    
+
+            //Prepare data to be inserted 
+            $stmt = $this->db->prepare($qry);
+
+            //Bind values to clean data and to replace the placeholders with real data
+            $stmt->bindValue('book_name',       $data['book_name']);
+            $stmt->bindValue('book_id',       $data['book_id']);
+            $stmt->bindValue('author',          $data['author']);
+            $stmt->bindValue('publication_year', $data['publication_year']);
+            $stmt->bindValue('book_status',     $data['book_status']);
+            $stmt->bindValue('book_img',        $data['book_img']);
+
+            $stmt->execute();
+
+            //return $this->db->lastInsertedId();
+            
+
+        }catch(PDOException $e){
+            echo "Database error: " . $e->getMessage();
+            return array();
+        }
+    }
 }
 
 ?>

@@ -1,13 +1,13 @@
 <?php
 require_once ROOT . "controllers" . DS . "AppController.php";
 require_once ROOT . "dao" . DS . 'BooksDAO.php';
-require_once ROOT . "include" . DS . 'functions.php';
+require_once ROOT . "includes" . DS . 'functions.php';
 
 class BooksController extends AppController{
     private BooksDAO $BooksDAO;
 
     public function __construct(){
-        parent:: __construct();
+        parent::__construct();
         $this->BooksDAO = new BooksDAO();
     }
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       
@@ -34,6 +34,16 @@ class BooksController extends AppController{
         }
 
         
+    }
+
+    public function add(){
+        echo "Books add action called.";
+
+        if (!empty($_POST)) {
+            trace($_POST);
+        }
+
+        $this->BooksDAO->addBook($_POST);
     }
 
 }

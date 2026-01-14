@@ -8,7 +8,7 @@ class AppController{
     }
 
     public function filter(){
-        call_user_func(array($this, $this -> route["action"]));
+        call_user_func(array($this, $this->route["action"]));
     }
 
     public function render(){
@@ -16,7 +16,8 @@ class AppController{
 
         require_once ROOT . "parts" . DS . "header.php";
         // view inladen
-        require_once ROOT . "pages" . DS . strtolower($this->route["controller"]) . DS . $this-> route["action"].".php";
+        require_once ROOT . "pages" . DS . strtolower($this->route["controller"]) . DS . $this->route["action"].".php";
+        // 'mvc/src/pages/books/index.php'
         // Default: src/pages/books/index.php
         require_once ROOT . "parts" . DS . "footer.php";
         
@@ -25,9 +26,14 @@ class AppController{
 
     public function set($variableName, $value){
         $this->viewVars[$variableName] = $value;
-        
+        // $viewVars = array(
+        //     'books' => array(
+        //         ....
+        //     )
+        // )   
     }
 
 }
+
 
 ?>
