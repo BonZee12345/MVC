@@ -9,16 +9,15 @@ document.addEventListener('DOMContentLoaded', function(){
 async function sendUserData(){
 
     //prep data
-    var requestUrl = 'ajax/23ajaxRequest.php';
+    var requestUrl = 'ajax/getSingleBook.php';
     var payload = {
-        username: 'testuser',
-        age: 25
+        bookId: 1,
     };
 
     //recommended -> check if user data checks out
-    if(!payload.username || payload.age <= 10){
-        throw new Error('invalid input');
-    }
+    // if(!payload.username || payload.age <= 10){
+    //     throw new Error('invalid input');
+    // }
 
     // Do AJAX request - call PHP
     try{
@@ -29,7 +28,7 @@ async function sendUserData(){
                 'Content-Type': 'application/json',
                 'Accept': 'application/json'
             },
-            body: JSON.stringify(payload)
+            body: JSON.stringify(payload),
         });
 
         // process data/resource send by PHP (res)
@@ -42,6 +41,10 @@ async function sendUserData(){
 
         try{
             data = JSON.parse(text);
+            // take "text" and put it so it gets displayed in html
+            
+
+
         }catch{
             throw new Error('Invalid JSON from server');
         }

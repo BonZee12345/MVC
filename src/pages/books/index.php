@@ -27,4 +27,3 @@ echo "</div>";
 trace($books);
 
 ?>
-<script src="src/ajax/ajax.js"></script>
