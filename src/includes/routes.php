@@ -12,7 +12,11 @@ $routes = [
     "edit-book"     => array("controller" => "Books",       "action" => "edit"),
     "delete-book"   => array("controller" => "Books",       "action" => "delete"),
 
-    "movies"        =>array("controller" => "Movies",        "action" => "index"),
-    "movie"        =>array("controller" => "Movies",        "action" => "view"),
-    "reserve-film"  =>array("controller" => "Movies",        "action" => "reserve")
+    "wishlist"      => array("controller" => "Wishlist",    "action" => "index"),
+    "wishlist-add"  => array("controller" => "Wishlist",    "action" => "add"),
+    
+
+    "movies"        =>array("controller" => "Movies",       "action" => "index"),
+    "movie"         =>array("controller" => "Movies",       "action" => "view"),
+    "reserve-film"  =>array("controller" => "Movies",       "action" => "reserve")
 ];

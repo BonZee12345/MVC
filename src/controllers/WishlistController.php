@@ -3,7 +3,7 @@ require_once ROOT . "controllers" . DS . "AppController.php";
 require_once ROOT . "dao" . DS . 'BooksDAO.php';
 require_once ROOT . "includes" . DS . 'functions.php';
 
-class BooksController extends AppController{
+class WishlistController extends AppController{
     private BooksDAO $BooksDAO;
 
     public function __construct(){
@@ -12,19 +12,9 @@ class BooksController extends AppController{
     }
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       
     public function index(){ // boeken/home-page
-        // Eerst checken of er een nieuw boek is. Zo ja, toevoegen:
-        trace($_POST);
-        
-
-
-        // Get books
-        // Alle boeken ophalen zodat ze kunnen weergegeven worden in de view.
         echo "Books index action called.";
         $books = $this->BooksDAO->getBooks();
         $this->set("books", $books); //eerst geven we de naam van de var in de view weer dan de data.
-
-
-
     }
 
     public function viewBook(){
@@ -33,34 +23,6 @@ class BooksController extends AppController{
         $this->set("book", $book);
         
     }
-
-
-    public function edit(){
-        echo "Books edit action called.";
-        trace($_GET["book_id"]);
-        $book = $this->BooksDAO->getBookById($_GET["book_id"]);
-        $this->set("book", $book);
-
-        if(!empty($_POST)){
-            trace($_POST);
-
-            $this->BooksDAO->editBookById($_POST);
-        }
-
-        
-    }
-
-    // public function add(){
-    //     echo "Books add action called.";
-        
-    //     if (!empty($_POST)) {
-    //         trace($_POST);
-            
-    //     }
-        
-    //     $book = $this->BooksDAO->addBook($_POST);
-    //     $this->set("book", $book);
-    // }
 
     public function add(){
         echo "Books add action called.";

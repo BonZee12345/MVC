@@ -49,3 +49,8 @@ VALUES
     ('Shrek',               'Animation',        2001, 'Andrew Adamson & Vicky Jenson',  5, 3, 'shrek.jpg'),
     ('The Dark Knight',     'Action',           2008, 'Christopher Nolan',              14, 12, 'MV5BMTMxNTMwODM0NF5BMl5BanBnXkFtZTcwODAyMTk2Mw@@._V1_FMjpg_UX1000_.jpg'),
     ('Back to the Future',  'Adventure',        1985, 'Robert Zemeckis',                10, 9, 'the-matrix.jpg');
+
+    CREATE TABLE IF NOT EXISTS wishlist (
+        wishlsit_id INT AUTO_INCREMENT,
+        book_id INT, book_name
+    );

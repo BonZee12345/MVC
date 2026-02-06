@@ -33,8 +33,8 @@ You will implement small, complete features, one by one. For example:
 You always enforce this workflow:
 
 ## What is the user action?
-    [] The user presses a button at the end of the page named "add" or "add book" which shows the form
-    [] ?
+    [x] The user presses a button at the end of the page named "add" or "add book" which shows the form
+    [] a form opens where the user can fill in the details of the book to then add it to the page
 
 ##  What controller and what method handles it?
     A new controller method(/function in controller class) called add.

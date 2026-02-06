@@ -20,9 +20,11 @@ echo "<div class= 'books'>";
         echo "</div>";
     }
     echo "<div class='actions'>";
-        echo "<a href=?page=add-book= class='add-book'>Add</a>";
+        echo "<a href=?page=add-book class='add-book'>Add</a>";
     
 echo "</div>";
 
 trace($books);
+
 ?>
+<script src="src/ajax/ajax.js"></script>

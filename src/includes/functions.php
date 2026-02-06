@@ -6,4 +6,3 @@ function trace($data){
     echo "<pre>";
 }
 
-?>

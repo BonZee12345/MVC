@@ -19,23 +19,24 @@
 
 echo "
     <form action='' method='post'>
-        <input type ='hidden' name='book_id' value='';>
+        <input type ='hidden' name='book_id' value=''>
 
         <label for='book_name'>Name</label>
-        <input type ='text' name='book_name' id='book_name' value='';>
+        <input type ='text' name='book_name' id='book_name' value=''>
 
         <label for='author'>author</label>
-        <input type ='text' name='author' id='author' value='';>
+        <input type ='text' name='author' id='author' value=''>
 
         <label for='publication_year'>pub. year</label>
-        <input type ='number' name='publication_year' id='publication_year' value='';>
+        <input type ='number' name='publication_year' id='publication_year' value=''>
 
         <label for='book_status'>Status</label>
-        <input type ='text' name='book_status' id='book_status' value='';>
+        <input type ='text' name='book_status' id='book_status' value=''>
 
         <label for='book_img'>Image</label>
-        <input type='text' name='book_img' id='book_img' value='';>
+        <input type='text' name='book_img' id='book_img' value=''>
 
         <input type='submit' values='Save';
     </form>
 ";
+
